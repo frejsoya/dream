@@ -1,6 +1,7 @@
 # Custom image?
 
-image: ocaml/opam:alpine-ocaml-4.12-fp
+#image: ocaml/opam:alpine-ocaml-4.12-fp does not work...
+image: ocaml/opam:ubuntu-20.04-ocaml-4.12
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
