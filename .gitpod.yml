@@ -1,7 +1,8 @@
 # Custom image?
 
 #image: ocaml/opam:alpine-ocaml-4.12-fp does not work...
-image: ocaml/opam:ubuntu-20.04-ocaml-4.12
+image:
+    file: .gitpod.Dockerfile
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
@@ -12,3 +13,5 @@ tasks:
 ports:
   - port: 3000
     onOpen: open-preview
+
+
