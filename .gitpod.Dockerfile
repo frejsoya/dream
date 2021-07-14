@@ -75,5 +75,7 @@ ENV OPAMYES="1" OPAMCONFIRMLEVEL="unsafe-yes" OPAMERRLOGLEN="0" OPAMPRECISETRACK
 RUN opam switch create 4.12 --packages=ocaml-base-compiler.4.12.0
 RUN opam pin add -k version ocaml-base-compiler 4.12.0
 RUN opam install -y opam-depext
+#FIXME move higher or or switch to standard git-pod base image.
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install pkg-config libssl-dev libev-dev 
 #ENTRYPOINT [ "opam", "exec", "--" ]
 #CMD bash
