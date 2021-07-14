@@ -6,10 +6,10 @@ image:
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'init script' # runs during prebuild
+  - init: echo 'init script' # runs during prebuild    
+    before: echo 'before' && opam install --deps-only --with-test .  && make build
     command: echo 'start script'
-  - before:
-    command: opam install --deps-only --with-test .  && make build
+    
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
