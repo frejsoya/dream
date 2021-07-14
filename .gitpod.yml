@@ -6,7 +6,7 @@ image:
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'init script' # runs during prebuild    
+  - init: echo 'init script' && eval $(opam env) # runs during prebuild    
     before: echo 'before' && opam install --deps-only --with-test .  && make build
     command: echo 'start script'
     
